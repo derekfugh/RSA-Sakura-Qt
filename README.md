@@ -14,20 +14,18 @@ Linux version of the Qt6 GUI for RSA-Sakura. It provides the same core encryptio
 ## 🛠️ 安装与依赖 (Prerequisites & Installation)
 
 **1. 安装运行依赖**
-本项目基于 Qt6。在运行或编译前，请确保系统已安装 Qt6 运行库：
+本项目基于 Qt6。在运行或编译前，请确保系统已安装 Qt6 运行库。：
 
 Debian / Ubuntu:
+```bash
 sudo apt update
-sudo apt install libqt6widgets6 libqt6network6
+sudo apt install libqt6widgets6 libqt6network6 libxcb-cursor0 libxkbcommon-x11-0 libxcb-icccm4 libxcb-keysyms1 libxcb-image0
+```
+或前往 Releases 页面下载最新的压缩包并解压。在终端里，执行 release 中的 ‘run-debug.sh’，该工具将自动安装Qt库，并尝试启动 Driver 程序。如启动失败，将在终端里输出缺失的库的信息。
 
-Fedora:
-sudo dnf install qt6-qtbase qt6-qtbase-gui
+(注：如果是 Fedora / Arch 等发行版，请安装对应的 qt6-base、xcb 等库。由于不同发行版包名差异，若遇到缺失库报错，请使用 ldd ./RSA-Sakura-Qt | grep "not found" 排查并安装对应包。)
 
-2. 下载与运行
-请前往 Releases 页面下载最新的压缩包并解压。
-你可以直接双击运行可执行文件，或者使用附带的一键安装脚本将其添加到系统的应用菜单中：
-# 赋予脚本执行权限
-chmod +x install_driver_linux.sh
+2. 安装 Driver
 
 # 安装快捷方式（加到系统应用列表）
 ./install_driver_linux.sh
