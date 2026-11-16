@@ -27,10 +27,10 @@ sudo apt install libqt6widgets6 libqt6network6 libxcb-cursor0 libxkbcommon-x11-0
 
 2. 安装 Driver
 
-# 安装快捷方式（加到系统应用列表）
+安装快捷方式（加到系统应用列表）
 ./install_driver_linux.sh
 
-# 卸载快捷方式（如需清理）
+卸载快捷方式（如需清理）
 ./install_driver_linux.sh -u
 
 ⚠️ 重要提醒 (Important Notes)
